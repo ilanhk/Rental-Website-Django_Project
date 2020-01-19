@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block lego %}
+<h1>Rental Booking Details</h1>
+
+
+<ul>
+    <li>Customer: {{rental.customer.first_name}} {{rental.customer.last_name}}</li>
+    <li>Vehicle: {{rental.vehicle.vehicle_type.name}}</li>
+    <li>Rental Date: {{rental.rental_date}}</li>
+    <li>Return Date: {{rental.return_date}}</li>
+
+</ul>
+
+
+<a href="{% url 'rentals' %}"> Back to List of Customers</a>
+
+{% endblock %}
+
+<!--daily rate: -->
+    <!--  Total Price: -->
+<!--    paid yes or no-->

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block lego %}
+<!--when logged in-->
+<h1>HOME PAGE</h1>
+{% if request.user.is_superuser %}
+    <h1>Hello superuser</h1>
+<!--    {% include 'customers.html' %}-->
+{% elif request.user.is_staff %}
+    <h1>Hello staff</h1>
+{% else %}
+    <h1>Hello customer</h1>
+<!--    {% include 'vehicles.html' %}-->
+{% endif %}
+
+{% endblock %}

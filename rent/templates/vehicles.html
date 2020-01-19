@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block lego %}
+<h1>List of Vehicles</h1> <br>
+<a class="btn btn-primary" href="{% url 'add_newvehicle' %}"> Add a New Vehicle </a>
+<br><br>
+{% for vehicle in vehicles %}
+<a href="{% url 'vehicle_details' id=vehicle.id %}"> <p>{{vehicle.vehicle_type.name}}, {{vehicle.vehicle_size.name}}</p> </a>
+{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block lego %}
+  <h2>Make a Rental Booking</h2>
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form }}
+    </table>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
+
+<!--<div class="input-group date" id="datepicker1" data-target-input="nearest">-->
+<!--  {{ form.date }}-->
+<!--  <div class="input-group-append" data-target="#datepicker1" data-toggle="datetimepicker">-->
+<!--    <div class="input-group-text"><i class="fa fa-calendar"></i></div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--  $(function () {-->
+<!--    $("#datepicker1").datepicker({-->
+<!--      format: 'YYYY-MM-DD',-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->

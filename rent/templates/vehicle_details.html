@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block lego %}
+<h1>Vehicle Details</h1>
+
+
+<h2>Vehicle Type: {{vehicle.vehicle_type.name}}</h2>   <!-- ask because of foriegn key  -->
+<ul>
+    <li>Date Created: {{vehicle.date_created}}</li>
+    <li>Real Cost: {{vehicle.real_cost}}</li>
+    <li>Size: {{vehicle.size.name}}</li>    <!-- ask because of foriegn key  -->
+
+<!--    how many rentals did this vehicle -->
+
+</ul>
+
+
+<a href="{% url 'vehicles' %}"> Back to List of Vehicles</a>
+
+{% endblock %}
+

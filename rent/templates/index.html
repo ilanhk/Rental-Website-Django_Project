@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!--when not logged in-->
+{% block lego %}
+<h1>INDEX PAGE</h1>
+<img src="{% static 'images/jamesbondwithbike.jpg' %}" alt="My image" width="400" height="250">
+<div>
+    <h1>You are not a user, this is only the index page. Please log in or sign up</h1>
+</div>
+
+
+{% endblock %}
+

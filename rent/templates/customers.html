@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block lego %}
+<h1>List of Customers</h1> <br>
+<a class="btn btn-primary" href="{% url 'add_newcustomer' %}"> Add a New customer </a>
+<br> <br>
+{% for customer in customers %}
+<a href="{% url 'customer_details' id=customer.id %}"> <p>{{customer.last_name}}, {{customer.first_name}}</p> </a>
+{% endfor %}
+
+
+{% endblock %}

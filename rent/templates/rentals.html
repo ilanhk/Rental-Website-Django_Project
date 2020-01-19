@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block lego %}
+<h1>List of Rentals</h1>
+{% for rental in rentals %}
+<a href="{% url 'rental_details' id=rental.customer.id %}"> <p>Customer: {{rental.customer.last_name}},   {{rental.customer.first_name}}    Vehicle: {{rental.vehicle.vehicle_type.name}}    Rental Date: {{rental.rental_date}}    Return Date: {{rental.return_date}}</p> </a>
+{% endfor %}
+
+
+{% endblock %}
+
+
