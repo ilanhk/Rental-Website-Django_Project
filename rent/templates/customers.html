@@ -7,8 +7,14 @@
 <a class="btn btn-primary" href="{% url 'add_newcustomer' %}"> Add a New customer </a>
 <br> <br>
 {% for customer in customers %}
-<a href="{% url 'customer_details' id=customer.id %}"> <p>{{customer.last_name}}, {{customer.first_name}}</p> </a>
+<a class="customerlink" href="{% url 'customer_details' id=customer.id %}"> <p>{{customer.last_name}}, {{customer.first_name}}</p> </a>
 {% endfor %}
 
+
+<style>
+    .customerlink{
+    color: black;
+    }
+</style>
 
 {% endblock %}

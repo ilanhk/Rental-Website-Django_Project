@@ -4,12 +4,37 @@
 
 <!--when not logged in-->
 {% block lego %}
-<h1>INDEX PAGE</h1>
-<img src="{% static 'images/jamesbondwithbike.jpg' %}" alt="My image" width="400" height="250">
-<div>
-    <h1>You are not a user, this is only the index page. Please log in or sign up</h1>
+
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to the Bikeshop!</h1>
+  <p class="lead">Enjoy the Ride!.</p>
+  <hr class="my-4">
+  <p>We Rent all types of vehicles you can image from bicylces to crazy sports cars and even rides from fictional characters!.</p>
+  <p class="lead">
+    <a class="btn btn-danger btn-lg" href="#" role="button">Sign Up!</a>
+  </p>
 </div>
 
+<div class="about">
+  <h2 style="text-decoration: underline;text-align: center;">About us:</h2>
+  <p>Welcome to the Bikeshop. Where you can rent all types of vehicles including vehicles from our favorite fictional characters!</p>
+</div>
+<style>
+
+
+    .jumbotron{
+     background-image: url("https://lh3.googleusercontent.com/proxy/88G_dQkso5GI75xI8xREUhAaHBXTJ8CpEynsBUkuObDxjLzq1qk8e5d4OKA3JellSmrkrO0j5Wzv40RKCVNr3y8z9JPUZzpf5uyNySqGrxgDks_HjWs");
+     width: 100%;
+     height: 800px;
+     background-size: cover;
+     color: white;
+    }
+
+.about{
+text-align: center;
+}
+
+</style>
 
 {% endblock %}
 

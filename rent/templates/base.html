@@ -11,8 +11,8 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="{% url 'home' %}">BikeShop</a>
+    <nav class="navbar navbar-expand-lg navbar-color">
+  <a class="navbar-brand nav-linktextcolor" href="{% url 'home' %}">BikeShop</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,46 +20,46 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">About Us<span class="sr-only">(current)</span></a>
+        <a class="nav-link nav-linktextcolor" href="#">About Us<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle nav-linktextcolor" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {% if request.user.is_staff %}
             Our Lists
             </a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{% url 'customers' %}">List of Customers</a>
-                  <a class="dropdown-item" href="{% url 'vehicles' %}">List of Vehicles</a>
+                  <a class="dropdown-item nav-linktextcolor" href="{% url 'customers' %}">List of Customers</a>
+                  <a class="dropdown-item nav-linktextcolor" href="{% url 'vehicles' %}">List of Vehicles</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{% url 'rentals' %}">List of Bookings</a>
+                  <a class="dropdown-item nav-linktextcolor" href="{% url 'rentals' %}">List of Bookings</a>
                 </div>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Sales Stastics <span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-linktextcolor" href="#">Sales Stastics <span class="sr-only">(current)</span></a>
               </li>
           {% else %}
             Bookings
             </a>
-               <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="{% url 'book_rental' %}">Make a New Booking</a>
-                    <a class="dropdown-item" href="#">Your Bookings</a>
+               <div class="dropdown-menu nav-linktextcolor" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="{% url 'book_rental' %}">Make a New Booking</a>
+                    <a class="dropdown-item nav-linktextcolor" href="#">Your Bookings</a>
                   <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Your Profile</a>
+                    <a class="dropdown-item nav-linktextcolor" href="#">Your Profile</a>
                 </div>
           {% endif %}
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Contact us<span class="sr-only">(current)</span></a>
+        <a class="nav-link nav-linktextcolor" href="#">Contact us<span class="sr-only">(current)</span></a>
       </li>
       {% if user.is_authenticated %}
-          <li class="nav-item active">
+          <li class="nav-item active nav-linktextcolor">
               <p>Hi {{ user.username }}!</p>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'logout' %}">logout<span class="sr-only">(current)</span></a>
+            <a class="nav-link nav-linktextcolor" href="{% url 'logout' %}">logout<span class="sr-only">(current)</span></a>
           </li>
       {% else %}
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'login' %}">Sign In<span class="sr-only">(current)</span></a>
+              <a class="nav-link nav-linktextcolor" href="{% url 'login' %}">Sign In<span class="sr-only">(current)</span></a>
             </li>
       {% endif %}
     </ul>
@@ -73,6 +73,124 @@
     {% block lego %}
 <!--        <h1>This is base</h1>-->
     {% endblock%}
+
+<div class="mt-5 pt-5 pb-5 footer">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-xs-12 about-company">
+      <h2>Bikeshop</h2>
+      <p class="pr-5 text-black-50">Follow us: </p>
+      <p>
+          <a href="https://www.facebook.com/ilan.lieberman.3">
+            <img class="logo" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-facebook_-512.png">
+          </a>
+          <a href="https://www.linkedin.com/in/ilan-lieberman-9a1043132/">
+            <img class="logo" src="https://cdn0.iconfinder.com/data/icons/shift-free/32/Linkedin-512.png">
+          </a>
+          <a href="https://www.instagram.com/ilan.lieberman.3/">
+            <img class="logo" src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/instagram-512.png">
+          </a>
+          <a href="https://github.com/ilanhk">
+            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png">
+          </a>
+      </p>
+    </div>
+    <div class="col-lg-3 col-xs-12 links">
+      <h4 class="mt-lg-0 mt-sm-3 ">dfkjsvakjl</h4>
+        <ul class="m-0 p-0">
+          <li>- <a class="footlink" href="#">sdfjhsdf</a></li>
+          <li>- <a class="footlink" href="#">sojsdsdkl</a></li>
+          <li>- <a class="footlink" href="#">fojfojvafkj</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-4 col-xs-12 location">
+      <h4 class="mt-lg-0 mt-sm-4">Contacts</h4>
+      <p class="mb-0"><i class="fa fa-phone mr-3"></i>(+972) 050-944-6829</p>
+      <p><i class="fa fa-envelope-o mr-3"></i>ilanlieberman@hotmail.com</p>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col copyright">
+      <p class=""><small class="text-black-50">© 2020. All Rights Reserved.</small></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+  <style>
+      .footer{
+  background: #d8d8d8;
+  color:black;
+
+
+
+
+
+
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  }
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);}
+
+}
+
+.logo
+{
+  height: 6vh;
+}
+
+/* Add a hover effect if you want */
+.logo:hover {
+  opacity: 0.7;
+}
+
+ a{
+   font-size: 18px;
+   color: white;
+  }
+
+ .footlink{
+ color: black;
+ }
+
+
+
+ .navbar-color{
+  background: #d8d8d8;
+  color: black;
+  }
+
+.nav-linktextcolor{
+color: black;
+  }
+
+
+
+
+  </style>
 
 </body>
 </html>

@@ -4,15 +4,42 @@
 
 {% block lego %}
 <!--when logged in-->
-<h1>HOME PAGE</h1>
-{% if request.user.is_superuser %}
-    <h1>Hello superuser</h1>
-<!--    {% include 'customers.html' %}-->
-{% elif request.user.is_staff %}
-    <h1>Hello staff</h1>
+
+
+<div class="jumbotron">
+    {% if request.user.is_superuser %}
+  <h1 class="display-4">Hello, my creator: {{ user.username }}!</h1>
+  <p class="lead">Welcome back to the Bikeshop! </p>
+  <hr class="my-4">
+  <p>See whats up!</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Check</a>
+    {% elif request.user.is_staff %}
+      <h1 class="display-4">Hello, {{ user.username }}!</h1>
+  <p class="lead"> Help man the Bikeshop!</p>
+  <hr class="my-4">
+  <p>Check out our sales Statistics!</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Check it out!</a>
 {% else %}
-    <h1>Hello customer</h1>
-<!--    {% include 'vehicles.html' %}-->
+  <h1 class="display-4">Hello, {{ user.username }}!</h1>
+  <p class="lead">Welcome to the Bikeshop! Lets go on a ride!</p>
+  <hr class="my-4">
+  <p>Start Booking a Ride!</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Book!</a>
 {% endif %}
 
+</div>
+
+
+
+
+<style>
+        .jumbotron{
+     background-image: url("https://lh6.googleusercontent.com/proxy/b6XHlbwvj8WlS4dOlwtCzbNSQX2m1m1vjgLiTpJoaXuZyyP60Vdlxncz03nX-aTphSaWvjSEaskEV-m3gxE61ngN_eNCFIeJpd4wbEi5sAWtxLbeyoKn");
+     width: 100%;
+     height: 800px;
+     background-size: cover;
+     color: white;
+    }
+
+</style>
 {% endblock %}
